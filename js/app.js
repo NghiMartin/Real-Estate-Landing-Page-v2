@@ -33,6 +33,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   
   });
+  const navLinks = document.querySelectorAll('.header_nav-link');
+
+  navLinks.forEach(function(navLink) {
+    navLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        smoothScrollTo(targetSection.offsetTop-100, 1000); // 1000 milliseconds (1 second) for smooth scroll
+      }
+    });
+  });
+ // Function for smooth scroll
+ function smoothScrollTo(targetPosition, duration) {
+  const startPosition = window.pageYOffset || document.documentElement.scrollTop; //Lấy vị trí cuộn của trang web.
+  const distance = targetPosition - startPosition; //  Khoảng cách cần phải cuộn để đến vị trí đích đến.
+  const startTime = performance.now(); // Thời điểm bắt đầu thực hiện smooth scroll.
+
+  function scrollAnimation(currentTime) {
+    const timeElapsed = currentTime - startTime; //  Thời gian đã trôi qua kể từ khi bắt đầu cuộn.
+    const progress = Math.min(timeElapsed / duration, 1); // giá trị nằm trong khoảng từ 0 đến 1, biểu thị phần trăm cuộc cuộn đã hoàn thành.
+    window.scrollTo(0, startPosition + distance * easeInOutCubic(progress)); 
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(scrollAnimation); // Kích hoạt hàm scrollAnimation mỗi khi trình duyệt sẵn sàng để vẽ một khung hình mới.
+    }
+  }
+
+  function easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+  }
+
+  requestAnimationFrame(scrollAnimation);
+}
 });
 
 document.addEventListener("DOMContentLoaded", function () {

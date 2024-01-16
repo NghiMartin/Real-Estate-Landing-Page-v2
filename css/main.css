@@ -18,25 +18,24 @@ button:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 3rem;
 }
-.container_header {
-    padding: 3rem;
+.header{
+    background-color: #E6F0FF;
     width: 100%;
     position: fixed;
+    z-index: 999;
+    padding: 3rem;
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    background-color: #E6F0FF;
-
-    z-index: 999;
 }
-.header{
+.container_header {
     width: 70%;
     display: flex;
     margin:auto;
     align-content:center ;
 }
+
 .logo_img{
     width: 10.7rem;
     height: 2.4rem;
@@ -101,12 +100,12 @@ background-color: transparent;
     background: transparent;
 }
 .hamburger-menu {
-    margin-top: 2rem;
+    position: absolute;
+    top: 1rem;
     background-color: #e6e6e6;
     padding: 0.7rem;
     display: none;
     cursor: pointer;
-    margin-right: 7rem;
     border-radius: 1rem;
     z-index: 999;
 }
@@ -354,14 +353,20 @@ align-items: center;
     display: flex;
     justify-content: center;
 }
-
+.feture2_image_card{
+    margin-right: auto;
+    margin-left: 10rem;
+    position: relative;
+}
 .feture2_card{
 position: absolute;
+top: -2rem;
+left: -15rem;
 width: 29vw;
 height: auto;
 }
 .feture2_image{
-width: 50rem;
+width: 25rem;
 height: auto;
 }
 .feture2_content{
@@ -380,6 +385,7 @@ padding-top: 8rem;
     line-height: 2rem;
 }
 .feture2_container_bottom{
+    margin-top: 5rem;
     display: flex;
     justify-content: space-between;
 }
