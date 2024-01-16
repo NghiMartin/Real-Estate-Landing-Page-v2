@@ -1,27 +1,78 @@
 @media (max-width: 576px) { 
-    .header{
-        display: none;
-    }
+
  }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) { 
-    .header{
-        display: none;
+    .container_left h1 {
+        font-size: 3rem;
+    }
+    .container_left span {
+        font-size: 1.2rem;
     }
  }
 
 /* // Large devices (desktops, 992px and up) */
 @media (max-width: 992px) { 
-    
+    .container_header{
+        background: transparent;
+    }
+    .header_nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header img {
+        display: none;
+    }
+    .header button {
+        display: none;
+    }
+    .header_nav.show {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+    .container_right {
+        display: none;
+    }
+    .container_left {
+        padding-top: 1rem;
+        max-width: 100%;
+        text-align: center;
+    }
+    .container_left button {
+        margin: auto;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .clients_logo span {
+        font-size: 1.2rem;
+    }
+    .logo_item{
+        height: 5rem;
+    }
+    .feture_cards_item{
+        width: 30vw;
+    }
+    .feture_cards_item:last-child{
+        display: none;
+    }
+    .container_bg_left {
+        max-width: 20vw;
+    }
+    .container_bg_left h3{
+       font-size: 2rem;
+    }
+    .container_bg_left p{
+        font-size: 1rem;
+     }
  }
 
-/* // X-Large devices (large desktops, 1200px and up) */
-@media (max-width: 1200px) { 
-    
- }
-
-/* // XX-Large devices (larger desktops, 1400px and up) */
-@media (max-width: 1400px) { 
-    
- }

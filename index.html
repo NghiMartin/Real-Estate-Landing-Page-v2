@@ -14,10 +14,11 @@
 </head>
 <body>
     <section class="hero_section">
-        <header class="header">
-            <img class="logo_img" src="img/Logo.png" alt="">
-            <nav class="header_nav" >
-                <ul class="header_nav-list">
+        <div class="container_header">
+            <header class="header">
+                <img class="logo_img" src="img/Logo.png" alt="">
+                <nav class="header_nav" >
+                    <ul class="header_nav-list">
                         <li class="header_nav-item">
                             <a class="header_nav-link" href="#">Home</a>
                         </li>
@@ -33,13 +34,21 @@
                         <li class="header_nav-item">
                             <a class="header_nav-link" href="#">Contact</a>
                         </li>
-                </ul>
-            </nav>
-               <div class="header_button">
-                <span class="header_span-signin" >Sign in</span>
-                <button class="header_button-signup" >Sign up</button>
+                    </ul>
+                </nav>
+                <div class="header_button">
+                    <button class="header_span-signin">Sign in</button>
+                    <button class="header_button-signup">Sign up</button>
+                    <div class="hamburger-menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
                 </div>
-        </header>
+            </header>
+        </div>
+        
+     
         <main class="container">
             <div class="container_left">
                 <span>Welcome to Besnik Agency</span>
@@ -134,9 +143,9 @@
                     <h4>Nikko Apartments</h4>
                 <span>8502 Preston Rd. Inglewood, Maine 98280</span>
                 <div class="cards_list_icon">
-                    <div class="card_icon"> <img src="img/bed_icon.png" alt=""> 5 Beds</div>
-                    <div class="card_icon"> <img src="img/bath_icon.png" alt=""> 2 both</div>
-                    <div class="card_icon"> <img src="img/subtract_icon.png" alt=""> 2000 Sqft</div>
+                    <div class="card_icon"> <img src="img/bed_icon.png" alt=""> <span>5 Beds</span></div>
+                    <div class="card_icon"> <img src="img/bath_icon.png" alt=""> <span>2 both</span></div>
+                    <div class="card_icon"> <img src="img/subtract_icon.png" alt=""> <span>2000 Sqft</span></div>
                 </div>
                 </div>
             </div>
@@ -148,9 +157,9 @@
                     <h4>CouCou Homestead</h4>
                 <span>8502 Preston Rd. Inglewood, Maine 98280</span>
                 <div class="cards_list_icon">
-                    <div class="card_icon"> <img src="img/bed_icon.png" alt=""> 5 Beds</div>
-                    <div class="card_icon"> <img src="img/bath_icon.png" alt=""> 2 both</div>
-                    <div class="card_icon"> <img src="img/subtract_icon.png" alt=""> 2000 Sqft</div>
+                    <div class="card_icon"> <img src="img/bed_icon.png" alt=""> <span>5 Beds</span></div>
+                    <div class="card_icon"> <img src="img/bath_icon.png" alt=""> <span>2 both</span></div>
+                    <div class="card_icon"> <img src="img/subtract_icon.png" alt=""> <span>2000 Sqft</span></div>
                 </div>
                 </div>
             </div>
@@ -162,9 +171,9 @@
                     <h4>Lavis 18 Residence</h4>
                 <span>8502 Preston Rd. Inglewood, Maine 98280</span>
                 <div class="cards_list_icon">
-                    <div class="card_icon"> <img src="img/bed_icon.png" alt=""> 5 Beds</div>
-                    <div class="card_icon"> <img src="img/bath_icon.png" alt=""> 2 both</div>
-                    <div class="card_icon"> <img src="img/subtract_icon.png" alt=""> 2000 Sqft</div>
+                    <div class="card_icon"> <img src="img/bed_icon.png" alt=""> <span>5 Beds</span></div>
+                    <div class="card_icon"> <img src="img/bath_icon.png" alt=""> <span>2 both</span></div>
+                    <div class="card_icon"> <img src="img/subtract_icon.png" alt=""> <span>2000 Sqft</span></div>
                 </div>
                 </div>
             </div>
@@ -175,8 +184,8 @@
             <div class="feture2_container">
                 <div class="feture2_container_top">
                     <div class="feture2_image_card">
-                        <img class="card" src="img/card.png" alt="">
-                        <img class="image" src="img/img_feturebottom.png" alt="">
+                        <img class="feture2_card" src="img/card.png" alt="">
+                        <img class="feture2_image" src="img/img_feturebottom.png" alt="">
                     </div>
                     <div class="feture2_content">
                         <img src="img/line.png" alt="">
@@ -186,15 +195,16 @@
                 </div>
                 <div class="feture2_container_bottom">
                     <div class="coutdown">
-                        <h1>2,500</h1>
+                        <div class="text_coutdown"><h1 class="counter" id="250">0 <h1>+</h1></h1></div>
                         <p>Homes For Sale</p>
                     </div>
                     <div class="coutdown">
-                        <h1>5,000+</h1>
+                        <div class="text_coutdown"><h1 class="counter" id="500">0 <h1>+</h1></h1></div>
+
                         <p>Homes Recently Sold</p>
                     </div>
                     <div class="coutdown">
-                        <h1>170+</h1>
+                        <div class="text_coutdown"><h1 class="counter" id="700">0 <h1>+</h1></h1></div>
                         <p>Price Reduced</p>
                     </div>
                 </div>
@@ -261,5 +271,6 @@
 
             </div>
         </footer>
+        <script src="js/app.js"></script>
 </body>
 </html>

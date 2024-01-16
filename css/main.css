@@ -1,10 +1,35 @@
-
+button{
+    width: 9.8rem;
+    background-color: var(--button-color);
+    color: var(--white-color);
+    font-size: 1.4rem;
+    padding: 0.9rem;
+    border-radius: 0.8rem;
+}
+button:hover{
+    background-color: #253d9d;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    padding: 0.9rem;
+    border-radius: 0.8rem;
+}
 .hero_section{
     background-color: #E6F0FF;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-top: 3rem;
+}
+.container_header {
+    padding: 3rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #E6F0FF;
+
+    z-index: 999;
 }
 .header{
     width: 70%;
@@ -63,30 +88,27 @@
 .header_button{
     font-size: 1.4rem;
     margin-left: auto;
+    display: flex;
 }
 .header_span-signin{
 color: var(--button-color);
 font-size: 1.4rem;
 cursor: pointer;
-}
-.header_button-signup{
-    width: 9.8rem;
-    background-color: var(--button-color);
-    color: var(--white-color);
-    font-size: 1.4rem;
-    padding: 0.9rem;
-    border-radius: 0.8rem;
+background-color: transparent;
 }
 
-.header_button-signup:hover{
-    width: 9.8rem;
-    background-color: #253d9d;
-    color: var(--white-color);
-    font-size: 1.4rem;
-    padding: 0.9rem;
-    border-radius: 0.8rem;
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
 }
 
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
 .container{
     padding-top: 3rem;
     width: 70%;
@@ -103,7 +125,10 @@ margin: auto;
     line-height: 3rem;
     max-width: 50%;
 }
-
+.container_right img {
+    width: auto;
+    height: 100%;
+}
 h1{
     margin-top: 1rem;
     line-height: 5rem;
@@ -112,12 +137,9 @@ h1{
 font-size: 5rem;
 }
 .container_left button{
-    border-radius: 1.2rem;
     width: 20rem;
     height: 5rem;
     margin-top: 5rem;
-    background-color: var(--button-color);
-    color: var(--white-color);
 }
 .container_right{
 margin-left: auto;
@@ -161,11 +183,14 @@ flex-direction: column;
     display: flex;
     height: 16rem;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
 }
 .logo_item{
-    padding: 2rem;
+    padding: 1.5rem;
     height: 7rem;
+}
+.logo_item img {
+    width: 10vw;
 }
 .logo_item:hover{
     background-color: rgb(255, 255, 255);
@@ -231,12 +256,9 @@ align-items: center;
     margin: auto;
 }
 .seller_button button{
-    border-radius: 1.2rem;
     width: 20rem;
     height: 5rem;
     margin-top: 5rem;
-    background-color: var(--button-color);
-    color: var(--white-color);
 }
 
 .feture_section_top{
@@ -274,7 +296,7 @@ align-items: center;
  justify-content: space-between;
 }
 .feture_cards_item{
-    width: 34rem;
+    width: 22vw;
     background: var(--white-color);
     border-radius: 1.2rem;
 }
@@ -322,13 +344,11 @@ align-items: center;
     display: flex;
     justify-content: center;
 }
-.feture2_image_card{
 
-}
-.card{
+.feture2_card{
 position: absolute;
 }
-.image{
+.feture2_image{
 width: 50rem;
 height: auto;
 }
@@ -350,6 +370,19 @@ padding-top: 8rem;
 .feture2_container_bottom{
     display: flex;
     justify-content: space-between;
+}
+.counter {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+.counter.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.text_coutdown{
+    display: flex;
 }
 .coutdown p {
 font-size: 1.6rem;
@@ -403,7 +436,9 @@ color: var(--grey-color);
     font-size: 1.3rem;
     border: var(--text-color);
 }
-
+.container_bg_left button:hover{
+    background-color: #eeeeee;
+}
 .footer_container{
  width: 70%;
  margin: auto;   
