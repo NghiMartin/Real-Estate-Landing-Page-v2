@@ -84,6 +84,13 @@
         font-size: 1rem;
         max-width: 20rem;
      }
+     .feture2_image_card{
+        padding: 3rem;
+    margin-left: 7rem;
+     }
+     .feture2_card{
+        left: -5rem;
+     }
  }
 
 /* // Medium devices (tablets, 768px and up) */
@@ -143,6 +150,10 @@
         flex-direction: column;
         text-align: center;
     }
+    .feture2_image_card{
+        padding: 3rem;
+    margin-left: 2rem;
+     }
     .feture2_card{
         width: 30rem;
     }

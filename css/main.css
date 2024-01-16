@@ -123,8 +123,9 @@ background-color: transparent;
     width: 70%;
 display: flex;
 margin: auto;
-
+margin-top: 10rem;
 }
+
 .container_left{
     padding-top: 10rem;
     display: flex;
@@ -354,8 +355,9 @@ align-items: center;
     justify-content: center;
 }
 .feture2_image_card{
+    margin-top: 5rem;
     margin-right: auto;
-    margin-left: 10rem;
+    margin-left: 20rem;
     position: relative;
 }
 .feture2_card{
