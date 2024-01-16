@@ -1,35 +1,31 @@
-@media (max-width: 576px) { 
 
- }
 
-/* // Medium devices (tablets, 768px and up) */
-@media (max-width: 768px) { 
-    .container_left h1 {
-        font-size: 3rem;
-    }
-    .container_left span {
-        font-size: 1.2rem;
-    }
- }
+
 
 /* // Large devices (desktops, 992px and up) */
 @media (max-width: 992px) { 
     .container_header{
         background: transparent;
+        padding: 0;
+        height: 100%;
+    }
+    .header .logo_img{
+        margin-top: 3rem;
     }
     .header_nav {
+        width: 100%;
         display: none;
-        flex-direction: column;
         position: absolute;
-        top: 60px;
         right: 0;
+        justify-content: center;
         background-color: #fff;
-        padding: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    .header img {
-        display: none;
+    .header_nav-list{
+        flex-direction: column;
+        justify-content: center;
     }
+    
     .header button {
         display: none;
     }
@@ -63,8 +59,8 @@
         width: 30vw;
     }
     .feture_cards_item:last-child{
-        display: none;
-    }
+        display: block;
+    } 
     .container_bg_left {
         max-width: 20vw;
     }
@@ -74,5 +70,98 @@
     .container_bg_left p{
         font-size: 1rem;
      }
+     .menu_product{
+        font-size: 1rem;
+        max-width: 20rem;
+     }
  }
 
+/* // Medium devices (tablets, 768px and up) */
+
+ @media (max-width: 768px) { 
+    .container_left h1 {
+        font-size: 3rem;
+    }
+    .container_left span {
+        font-size: 1.2rem;
+    }
+ }
+
+
+/* // Medium devices (phone, 576px and up) */
+ @media (max-width: 576px) { 
+    .clients_logo .container {
+        padding: 1rem;
+        width: 100%;
+    }
+    .container_content{
+        max-width: 20rem;
+    }
+    .logos_list{
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 7rem;
+    }
+    .logo_item img{
+        width: 20vw;
+    }
+    .seller_types{
+        flex-direction: column;
+    }
+    .seller_types-item{
+        margin: 4rem;
+    }
+    .feture_text h4{
+        font-size: 1rem;
+    }
+    .feture_text h4{
+        font-size: 1.8rem;
+    }
+    .feture_cards{
+        flex-direction: column;
+    }
+    .feture_cards_item{
+        width: 100%;
+        margin-top: 5rem;
+    }
+    .feture_cards_item:last-child{
+        display: block;
+    }
+    .feture2_container_top{
+        flex-direction: column;
+        text-align: center;
+    }
+    .feture2_card{
+        width: 30rem;
+    }
+    .feture2_content h2 {
+        max-width: 100vw;
+    }
+    .feture2_container_bottom{
+        margin-top: 3rem;
+        height: 30rem;
+        flex-direction: column;
+        align-items: center;
+        align-content: space-between;
+    }
+
+    .newletter_container_bg img{
+        display: none;
+    }
+
+    .container_bg_left{
+        max-width: 100%;
+        left: 0.5rem;
+        text-align: center;
+    }
+
+    .container_menu{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .menu_product{
+        margin-top: 3rem;
+    }
+    
+ }
